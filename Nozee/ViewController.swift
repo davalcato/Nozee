@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     let collectionView: UICollectionView = {
+        let cv = UICollectionView()
+        
         
     }
 
