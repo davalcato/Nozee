@@ -18,7 +18,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.addSubview(collectionView)
+        collectionView.frame = view.frame
+       
     }
 
 
