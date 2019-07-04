@@ -11,10 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     let collectionView: UICollectionView = {
-        let cv = UICollectionView()
-        
-        
-    }
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        return cv
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
