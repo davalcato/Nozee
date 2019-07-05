@@ -8,14 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let collectionView: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .red
+        cv.dataSource = self
+        cv.delegate = self
+        
         return cv
     }()
+    
+    let cellId = "cellId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +29,21 @@ class ViewController: UIViewController {
         // use autolayout instead of this method
         
         collectionView.anchorToTop(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
-       
+        
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+ 
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        
+        cell.backgroundColor = .blue
+        
+        return cell
     }
 
 }
