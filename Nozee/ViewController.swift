@@ -25,11 +25,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let cellId = "cellId"
     
     let pages: [Page] = {
-        let firstPage = Page(title: "Share your advertizing experiences", message: "It's free to send location base clothing advertising to your friends.", imageName: "Page1")
+        let firstPage = Page(title: "Share your advertizing experiences", message: "It's free to send location base clothing advertising to your friends.", imageName: "page1")
        
-        let secondPage = Page(title: "Send from your library", message: "Tap the more menu next to any video. Choose \"Send this Video\"", imageName: "Page2")
+        let secondPage = Page(title: "Send from your library", message: "Tap the more menu next to any video. Choose \"Send this Video\"", imageName: "page2")
         
-        let thirdPage = Page(title: "Send from your player", message: "Tap the more menu in the upper right corner. Choose \"Send this Video\"", imageName: "Page3")
+        let thirdPage = Page(title: "Send from your player", message: "Tap the more menu in the upper right corner. Choose \"Send this Video\"", imageName: "page3")
         
         return [firstPage, secondPage, thirdPage]
         
@@ -51,6 +51,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PageCell
         
         let page = pages[indexPath.item]
