@@ -37,7 +37,7 @@ class PageCell: UICollectionViewCell {
         addSubview(imageView)
         addSubview(textView)
         
-        imageView.anchorToTop(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
+        imageView.anchorToTop(top: topAnchor, left: leftAnchor, bottom: textView.topAnchor, right: rightAnchor)
         textView.anchorToTop(top: nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
         textView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.3).isActive = true
         
