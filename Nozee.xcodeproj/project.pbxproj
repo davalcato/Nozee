@@ -61,11 +61,11 @@
 				7522ADBA22CDB2DD0050E32A /* AppDelegate.swift */,
 				7522ADBC22CDB2DD0050E32A /* SceneDelegate.swift */,
 				7522ADBE22CDB2DD0050E32A /* ViewController.swift */,
+				75ED066D22CEE1C500497E11 /* PageCell.swift */,
 				7522ADC022CDB2DD0050E32A /* Main.storyboard */,
 				7522ADC322CDB2DF0050E32A /* Assets.xcassets */,
 				7522ADC522CDB2DF0050E32A /* LaunchScreen.storyboard */,
 				7522ADC822CDB2DF0050E32A /* Info.plist */,
-				75ED066D22CEE1C500497E11 /* PageCell.swift */,
 			);
 			path = Nozee;
 			sourceTree = "<group>";

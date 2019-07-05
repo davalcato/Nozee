@@ -18,13 +18,14 @@ class PageCell: UICollectionViewCell {
     
     let imageView: UIImageView = {
         let iv = UIImageView()
+        iv.contentMode = .scaleAspectFill
         iv.backgroundColor = .yellow
+        iv.image = UIImage(named: "page1")
+        iv.clipsToBounds = true
         return iv
     }()
     
     func setupViews() {
-        backgroundColor = .blue
-        
         addSubview(imageView)
         imageView.anchorToTop(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
         
