@@ -17,7 +17,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cv.backgroundColor = .red
         cv.dataSource = self
         cv.delegate = self
-        
+        cv.isPagingEnabled = true
         return cv
     }()
     
