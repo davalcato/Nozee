@@ -25,6 +25,14 @@ class PageCell: UICollectionViewCell {
         return iv
     }()
     
+   = {
+        let tv = UITextView()
+        tv.text = "SAMPLE TEXT FOR NOW"
+        tv.isEditable = false
+        return tv
+        
+    }()
+    
     func setupViews() {
         addSubview(imageView)
         imageView.anchorToTop(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
