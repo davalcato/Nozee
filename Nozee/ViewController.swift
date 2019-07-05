@@ -23,6 +23,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }()
     
     let cellId = "cellId"
+    
+    let pages: [Page] = {
+        return []
+        
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
