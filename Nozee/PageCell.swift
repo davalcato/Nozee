@@ -24,7 +24,11 @@ class PageCell: UICollectionViewCell {
             
             attributedText.append(NSAttributedString(string: "\n\n\(page.message)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: color]))
             
-//            textView.text = page.title + page.message
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+            
+            let length = attributedText.string.count
+            attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: length))
             
             textView.attributedText = attributedText
         }
