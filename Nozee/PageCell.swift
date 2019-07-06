@@ -17,6 +17,14 @@ class PageCell: UICollectionViewCell {
             }
             
             imageView.image = UIImage(named: page.imageName)
+            
+            let color = UIColor(white: 0.2, alpha: 1)
+            
+            let attributedText = NSMutableAttributedString(string: page.title, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium), NSAttributedString.Key.foregroundColor: color])
+            
+//            textView.text = page.title + page.message
+            
+            textView.attributedText = attributedText
         }
         
     }
