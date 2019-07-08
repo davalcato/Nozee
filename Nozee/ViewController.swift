@@ -87,6 +87,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let pageNumber = Int(targetContentOffset.pointee.x / view.frame.width)
         pageControl.currentPage = pageNumber
         
+        //this is the scenerio where we're on the last page
+        if pageNumber == pages.count {
+            pageControlBottomAnchor?.constant = 40
+        } else {
+            pageControlBottomAnchor?.constant = 0
+        }
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+            
+        }, completion: nil)
+        
     }
     
     
