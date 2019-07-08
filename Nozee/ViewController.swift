@@ -23,6 +23,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }()
     
     let cellId = "cellId"
+    let loginCellId = "loginCellId"
+    
     
     let pages: [Page] = {
         let firstPage = Page(title: "Share your advertizing experiences", message: "It's free to send location base clothing advertising to your friends.", imageName: "page1")
@@ -76,14 +78,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         collectionView.anchorToTop(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
         
+       registerCells()
+    }
+    
+    fileprivate func registerCells() {
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: loginCellId)
+        
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pages.count
+        return pages.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.item == pages.count {
+            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath)
+            return loginCell
+            
+        }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PageCell
         
