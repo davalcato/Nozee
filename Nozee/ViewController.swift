@@ -81,6 +81,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        registerCells()
     }
     
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        
+        print(targetContentOffset.pointee.x)
+    }
+    
+    
     fileprivate func registerCells() {
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: loginCellId)
