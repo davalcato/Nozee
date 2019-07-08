@@ -59,6 +59,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return button
     }()
     
+    var pageControlBottomAnchor: NSLayoutConstraint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionView)
@@ -75,7 +77,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
   
         // use autolayout instead of this method
-        
         collectionView.anchorToTop(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
         
        registerCells()
