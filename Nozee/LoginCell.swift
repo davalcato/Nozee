@@ -20,6 +20,8 @@ class LoginCell: UICollectionViewCell {
     let emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter email here"
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.layer.borderWidth = 1
         return textField
         
     }()
@@ -28,9 +30,12 @@ class LoginCell: UICollectionViewCell {
         super.init(frame: frame)
         
         addSubview(logoImageView)
+        addSubview(emailTextField)
         
         _ = logoImageView.anchor(centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -200, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 160, heightConstant: 160)
         logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+        _ = emailTextField.anchor(logoImageView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 8, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: 0, heightConstant: 50)
         
     }
     
