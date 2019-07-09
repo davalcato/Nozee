@@ -37,6 +37,16 @@ class LoginCell: UICollectionViewCell {
         
     }()
     
+    let loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .orange
+        button.setTitle("Log in", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        
+        return button
+        
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
