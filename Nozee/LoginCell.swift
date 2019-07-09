@@ -17,12 +17,20 @@ class LoginCell: UICollectionViewCell {
         
     }()
     
+    let emailTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Enter email here"
+        return textField
+        
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         addSubview(logoImageView)
         
-        logoImageView.anchor(centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -200, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 160, heightConstant: 160)
+        _ = logoImageView.anchor(centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -200, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 160, heightConstant: 160)
+        logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
     }
     
