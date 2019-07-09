@@ -14,6 +14,7 @@
 		7522ADC422CDB2DF0050E32A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7522ADC322CDB2DF0050E32A /* Assets.xcassets */; };
 		7522ADC722CDB2DF0050E32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7522ADC522CDB2DF0050E32A /* LaunchScreen.storyboard */; };
 		75A9AA5422D0504C00302EE1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A9AA5322D0504C00302EE1 /* Extensions.swift */; };
+		75A9AA5622D4110800302EE1 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A9AA5522D4110800302EE1 /* LoginCell.swift */; };
 		75ED066E22CEE1C500497E11 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ED066D22CEE1C500497E11 /* PageCell.swift */; };
 		75ED067022CF005000497E11 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ED066F22CF005000497E11 /* Page.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		7522ADC622CDB2DF0050E32A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7522ADC822CDB2DF0050E32A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A9AA5322D0504C00302EE1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		75A9AA5522D4110800302EE1 /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		75ED066D22CEE1C500497E11 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		75ED066F22CF005000497E11 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 				7522ADBC22CDB2DD0050E32A /* SceneDelegate.swift */,
 				7522ADBE22CDB2DD0050E32A /* ViewController.swift */,
 				75A9AA5322D0504C00302EE1 /* Extensions.swift */,
+				75A9AA5522D4110800302EE1 /* LoginCell.swift */,
 				75ED066D22CEE1C500497E11 /* PageCell.swift */,
 				75ED066F22CF005000497E11 /* Page.swift */,
 				7522ADC022CDB2DD0050E32A /* Main.storyboard */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7522ADBF22CDB2DD0050E32A /* ViewController.swift in Sources */,
+				75A9AA5622D4110800302EE1 /* LoginCell.swift in Sources */,
 				75A9AA5422D0504C00302EE1 /* Extensions.swift in Sources */,
 				7522ADBB22CDB2DD0050E32A /* AppDelegate.swift in Sources */,
 				75ED066E22CEE1C500497E11 /* PageCell.swift in Sources */,
