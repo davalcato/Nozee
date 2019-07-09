@@ -52,12 +52,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }()
     
-    let nextButton: UIButton = {
+    lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Next", for: .normal)
         button.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
+        button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
+        
         return button
     }()
+    
+    @objc func nextPage() {
+        print("next")
+        
+        
+    }
     
     var pageControlBottomAnchor: NSLayoutConstraint?
     var skipButtonTopAnchor: NSLayoutConstraint?
