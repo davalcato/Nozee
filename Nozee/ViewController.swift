@@ -63,7 +63,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @objc func nextPage() {
         let indexPath = IndexPath(item: pageControl.currentPage + 1, section: 0)
-        collectionView.scrollToItem(at: IndexPath, at: .centeredHorizontally, animated: true)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        pageControl.currentPage += 1
         
     }
     
