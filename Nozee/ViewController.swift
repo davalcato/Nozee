@@ -62,14 +62,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }()
     
     @objc func nextPage() {
-        print("next")
-        
+        let indexPath = IndexPath(item: pageControl.currentPage + 1, section: 0)
+        collectionView.scrollToItem(at: IndexPath, at: .centeredHorizontally, animated: true)
         
     }
     
     var pageControlBottomAnchor: NSLayoutConstraint?
     var skipButtonTopAnchor: NSLayoutConstraint?
-     var nextButtonTopAnchor: NSLayoutConstraint?
+    var nextButtonTopAnchor: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
