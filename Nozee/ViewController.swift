@@ -62,6 +62,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }()
     
     @objc func nextPage() {
+        //user is on the last page
+        if pageControl.currentPage == pages.count {
+            return
+            
+        }
         let indexPath = IndexPath(item: pageControl.currentPage + 1, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         pageControl.currentPage += 1
