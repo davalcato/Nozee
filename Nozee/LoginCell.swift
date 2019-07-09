@@ -17,8 +17,8 @@ class LoginCell: UICollectionViewCell {
         
     }()
     
-    let emailTextField: UITextField = {
-        let textField = UITextField()
+    let emailTextField: LeftPaddedTextField = {
+        let textField = LeftPaddedTextField()
         textField.placeholder = "Enter email"
         textField.layer.borderColor = UIColor.lightGray.cgColor
         textField.layer.borderWidth = 1
@@ -27,8 +27,8 @@ class LoginCell: UICollectionViewCell {
         
     }()
     
-    let passwordTextField: UITextField = {
-        let textField = UITextField()
+    let passwordTextField: LeftPaddedTextField = {
+        let textField = LeftPaddedTextField()
         textField.placeholder = "Enter password"
         textField.layer.borderColor = UIColor.lightGray.cgColor
         textField.layer.borderWidth = 1
@@ -73,11 +73,11 @@ class LoginCell: UICollectionViewCell {
 
 class LeftPaddedTextField: UITextField {
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        <#code#>
+       return CGRect(x: bounds.origin.x + 10, y: bounds.origin.y, width: bounds.width + 10, height: bounds.height)
     }
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        <#code#>
+        return CGRect(x: bounds.origin.x + 10, y: bounds.origin.y, width: bounds.width + 10, height: bounds.height)
     }
 }
 
