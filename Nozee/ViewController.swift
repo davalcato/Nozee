@@ -65,8 +65,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //user is on the last page
         if pageControl.currentPage == pages.count {
             return
+        }
+        
+        //second last page to scroll over
+        if pageControl.currentPage == pages.count - 1 {
+            pageControlBottomAnchor?.constant = 40
+            skipButtonTopAnchor?.constant = -40
+            nextButtonTopAnchor?.constant = -40
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: nil)
             
         }
+        
         let indexPath = IndexPath(item: pageControl.currentPage + 1, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         pageControl.currentPage += 1
