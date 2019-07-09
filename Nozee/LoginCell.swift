@@ -9,10 +9,20 @@
 import UIKit
 
 class LoginCell: UICollectionViewCell {
+    
+    let logoImageView: UIImageView = {
+        let image = UIImage(named: "logo")
+        let imageView = UIImageView(image: image)
+        return imageView
+        
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .green
+        addSubview(logoImageView)
+        
+        logoImageView.anchor(centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -200, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 160, heightConstant: 160)
         
     }
     
