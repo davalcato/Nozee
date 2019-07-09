@@ -67,6 +67,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         return button
     }()
+  
     
     @objc func nextPage() {
         //user is on the last page
