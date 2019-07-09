@@ -65,6 +65,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        observeKeyboardNotifications()
+        
         view.addSubview(collectionView)
         view.addSubview(pageControl)
         view.addSubview(skipButton)
@@ -82,6 +85,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.anchorToTop(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
         
        registerCells()
+    }
+    
+    fileprivate func observeKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow),
+        name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+    }
+    
+    @objc func keyboardShow() {
+        print("keyboard shown")
+        
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
