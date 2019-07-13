@@ -216,10 +216,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
       
         collectionView.collectionViewLayout.invalidateLayout()
         
-        
-        //Centering the photos in the device orientation
         let indexPath = IndexPath(item: pageControl.currentPage, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        //Calling at a different moment in time. 
+        DispatchQueue.main.async {
+            //Centering the photos in the device orientation
+            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
+        
     }
  
 }
