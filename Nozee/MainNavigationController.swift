@@ -14,7 +14,7 @@ class MainNavigationController: UINavigationController {
         view.backgroundColor = .white
         
         if isLoggedIn() {
-            //If the user is logged in
+            //If the user is logged into the app the user screen displays
             let homeController = HomeController()
             viewControllers = [homeController]
         } else {
@@ -25,7 +25,7 @@ class MainNavigationController: UINavigationController {
     
     fileprivate func isLoggedIn() -> Bool {
         
-        return false
+        return true
     }
     
     @objc func showLoginController() {
@@ -41,7 +41,12 @@ class MainNavigationController: UINavigationController {
 class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+       
+        let imageView = UIImageView(image: UIImage(named: "home"))
+        view.addSubview(imageView)
+        _ = imageView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        
     }
 }
 
