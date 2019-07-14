@@ -25,7 +25,7 @@ class MainNavigationController: UINavigationController {
     
     fileprivate func isLoggedIn() -> Bool {
         
-        return true
+        return false
     }
     
     @objc func showLoginController() {
@@ -41,6 +41,8 @@ class MainNavigationController: UINavigationController {
 class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "You're logged in"
        
         let imageView = UIImageView(image: UIImage(named: "home"))
         view.addSubview(imageView)
