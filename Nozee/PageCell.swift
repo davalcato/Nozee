@@ -16,7 +16,15 @@ class PageCell: UICollectionViewCell {
                 return
             }
             
-            imageView.image = UIImage(named: page.imageName)
+            //This code calls the landscape photos
+            var imageName = page.imageName
+            if UIDevice.current.orientation.isLandscape {
+                print("Landscape")
+//                imageName += "page1_landscape.png"
+                
+            }
+            
+            imageView.image = UIImage(named: imageName )
             
             let color = UIColor(white: 0.2, alpha: 1)
             
@@ -35,7 +43,6 @@ class PageCell: UICollectionViewCell {
         }
         
     }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

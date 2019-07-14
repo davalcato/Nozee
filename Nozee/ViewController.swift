@@ -136,11 +136,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }, completion: nil)
         
     }
-    
+    //This is where the keyboard show up
     @objc func keyboardShow() {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             
-            self.view.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: self.view.frame.height)
+            //If it's landscape translate -100 or 50 for portrait from the keyboard
+            let y: CGFloat = UIDevice.current.orientation.isLandscape ? -100 : -50
+            self.view.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: self.view.frame.height)
             
         }, completion: nil)
         
@@ -213,14 +215,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     //UIDevice current orientation
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-      
+        
         collectionView.collectionViewLayout.invalidateLayout()
         
         let indexPath = IndexPath(item: pageControl.currentPage, section: 0)
-        //Calling at a different moment in time. 
+        //Calling at a different moment in time.
         DispatchQueue.main.async {
             //Centering the photos in the device orientation
             self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            //Code draw all your cells and execute or fired when you set this page. Are everytime the cellForItemAt method is called it gets calls for each individual cells.
+            self.collectionView.reloadData()
+            
         }
         
     }
