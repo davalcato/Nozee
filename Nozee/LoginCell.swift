@@ -46,11 +46,13 @@ class LoginCell: UICollectionViewCell {
         return button
     }()
     
-    var loginController: LoginController?
+//    var loginController: LoginController?
+    
+    var delegate: LoginControllerDelegate?
     //This handles the touching of the Login Button
     @objc func handleLogin() {
-        loginController?.finishLoggingIn()
-        
+//        loginController?.finishLoggingIn()
+        delegate?.finishLoggingIn()
     }
     
     override init(frame: CGRect) {

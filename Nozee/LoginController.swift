@@ -8,7 +8,11 @@
 
 import UIKit
 
-class LoginController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+protocol LoginControllerDelegate {
+    func finishLoggingIn()
+}
+
+class LoginController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, LoginControllerDelegate {
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -200,6 +204,8 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         //This is where the last login cell is render
         if indexPath.item == pages.count {
             let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
+//            loginCell.loginController = self
+            loginCell.delegate = self 
             return loginCell
         }
         
@@ -212,7 +218,8 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     }
     
     func finishLoggingIn() {
-        print("Finish logging in from LoginController")
+        //This is where we implement the homeController
+        dismiss(animated: true, completion: nil)
         
     }
     
