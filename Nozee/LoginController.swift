@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class LoginController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -141,7 +141,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             
             //If it's landscape translate -100 or 50 for portrait from the keyboard
-            let y: CGFloat = UIDevice.current.orientation.isLandscape ? -100 : -50
+            let y: CGFloat = UIDevice.current.orientation.isLandscape ? -100 : -40
             self.view.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: self.view.frame.height)
             
         }, completion: nil)
