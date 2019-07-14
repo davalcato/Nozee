@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginControllerDelegate {
+protocol LoginControllerDelegate: class {
     func finishLoggingIn()
 }
 
@@ -204,7 +204,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         //This is where the last login cell is render
         if indexPath.item == pages.count {
             let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
-//            loginCell.loginController = self
+
             loginCell.delegate = self 
             return loginCell
         }
@@ -218,6 +218,13 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     }
     
     func finishLoggingIn() {
+        //This gives the actual window of the viewController and the RV returns a UIView class
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        //Guard statement to cast it down to what it actually is
+        guard let mainNavigationController = rootViewController as? MainNavigationController else { return }
+        
+        mainNavigationController.viewControllers = [HomeController()]
+
         //This is where we implement the homeController
         dismiss(animated: true, completion: nil)
         

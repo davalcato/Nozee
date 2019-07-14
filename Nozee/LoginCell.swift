@@ -46,9 +46,7 @@ class LoginCell: UICollectionViewCell {
         return button
     }()
     
-//    var loginController: LoginController?
-    
-    var delegate: LoginControllerDelegate?
+    weak var delegate: LoginControllerDelegate?
     //This handles the touching of the Login Button
     @objc func handleLogin() {
 //        loginController?.finishLoggingIn()
