@@ -11,12 +11,9 @@ import UIKit
 class MainNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         
-        //We get the view if the user isn't logged in
-        let isLoggedIn = true
-        
-        if isLoggedIn {
+        if isLoggedIn() {
             //If the user is logged in
             let homeController = HomeController()
             viewControllers = [homeController]
@@ -24,6 +21,11 @@ class MainNavigationController: UINavigationController {
             perform(#selector(showLoginController), with: nil, afterDelay: 0.01)
         }
     
+    }
+    
+    fileprivate func isLoggedIn() -> Bool {
+        
+        return false
     }
     
     @objc func showLoginController() {
