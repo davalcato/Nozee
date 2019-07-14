@@ -197,8 +197,9 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        //This is where the last login cell is render
         if indexPath.item == pages.count {
-            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath)
+            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
             return loginCell
         }
         
@@ -210,7 +211,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         return cell
     }
     
-    func finishLogging() {
+    func finishLoggingIn() {
         print("Finish logging in from LoginController")
         
     }

@@ -45,9 +45,11 @@ class LoginCell: UICollectionViewCell {
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
+    
+    var loginController: LoginController?
     //This handles the touching of the Login Button
     @objc func handleLogin() {
-        print("123")
+        loginController?.finishLoggingIn()
         
     }
     
