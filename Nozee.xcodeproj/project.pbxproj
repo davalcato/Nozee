@@ -15,6 +15,7 @@
 		7522ADC722CDB2DF0050E32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7522ADC522CDB2DF0050E32A /* LaunchScreen.storyboard */; };
 		7528CA3422DAE71F00F3D275 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7528CA3322DAE71F00F3D275 /* MainNavigationController.swift */; };
 		756063C822DBF95700BACB37 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756063C722DBF95700BACB37 /* HomeController.swift */; };
+		756063CA22DBFE8600BACB37 /* UserDefaults+helps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756063C922DBFE8600BACB37 /* UserDefaults+helps.swift */; };
 		75A9AA5422D0504C00302EE1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A9AA5322D0504C00302EE1 /* Extensions.swift */; };
 		75A9AA5622D4110800302EE1 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A9AA5522D4110800302EE1 /* LoginCell.swift */; };
 		75ED066E22CEE1C500497E11 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75ED066D22CEE1C500497E11 /* PageCell.swift */; };
@@ -32,6 +33,7 @@
 		7522ADC822CDB2DF0050E32A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7528CA3322DAE71F00F3D275 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		756063C722DBF95700BACB37 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		756063C922DBFE8600BACB37 /* UserDefaults+helps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+helps.swift"; sourceTree = "<group>"; };
 		75A9AA5322D0504C00302EE1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		75A9AA5522D4110800302EE1 /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		75ED066D22CEE1C500497E11 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				7522ADBA22CDB2DD0050E32A /* AppDelegate.swift */,
 				7528CA3322DAE71F00F3D275 /* MainNavigationController.swift */,
+				756063C922DBFE8600BACB37 /* UserDefaults+helps.swift */,
 				756063C722DBF95700BACB37 /* HomeController.swift */,
 				7522ADBC22CDB2DD0050E32A /* SceneDelegate.swift */,
 				7522ADBE22CDB2DD0050E32A /* LoginController.swift */,
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7522ADBF22CDB2DD0050E32A /* LoginController.swift in Sources */,
+				756063CA22DBFE8600BACB37 /* UserDefaults+helps.swift in Sources */,
 				75A9AA5622D4110800302EE1 /* LoginCell.swift in Sources */,
 				7528CA3422DAE71F00F3D275 /* MainNavigationController.swift in Sources */,
 				75A9AA5422D0504C00302EE1 /* Extensions.swift in Sources */,
