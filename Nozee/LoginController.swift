@@ -225,9 +225,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         
         mainNavigationController.viewControllers = [HomeController()]
         
-        UserDefaults.standard.set(true, forKey: "isLoggedIn")
-        //This is where the value get saved 
-        UserDefaults.standard.synchronize()
+        UserDefaults.standard.setIsLoggedIn(value: true)
 
         //This is where we implement the homeController
         dismiss(animated: true, completion: nil)

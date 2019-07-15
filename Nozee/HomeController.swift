@@ -23,10 +23,10 @@ class HomeController: UIViewController {
     }
     
     @objc func handleSignOut() {
-        UserDefaults.standard.set(false, forKey: "isLoggedIn")
-        UserDefaults.standard.synchronize()
+        UserDefaults.standard.setIsLoggedIn(value: false)
         
-        //This presents the LoginController modally 
+        
+        //This presents the LoginController modally
         let loginController = LoginController()
         present(loginController, animated: true, completion: nil)
         
