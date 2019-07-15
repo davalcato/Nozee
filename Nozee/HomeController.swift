@@ -23,7 +23,8 @@ class HomeController: UIViewController {
     }
     
     @objc func handleSignOut() {
-        
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
         
     }
 }
