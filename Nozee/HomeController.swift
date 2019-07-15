@@ -26,6 +26,10 @@ class HomeController: UIViewController {
         UserDefaults.standard.set(false, forKey: "isLoggedIn")
         UserDefaults.standard.synchronize()
         
+        //This presents the LoginController modally 
+        let loginController = LoginController()
+        present(loginController, animated: true, completion: nil)
+        
     }
 }
 
