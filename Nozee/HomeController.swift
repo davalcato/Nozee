@@ -15,9 +15,14 @@ class HomeController: UIViewController {
         
         navigationItem.title = "You're logged in"
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(handleSignOut))
+        
         let imageView = UIImageView(image: UIImage(named: "home"))
         view.addSubview(imageView)
         _ = imageView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 54, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+    }
+    
+    @objc func handleSignOut() {
         
         
     }
