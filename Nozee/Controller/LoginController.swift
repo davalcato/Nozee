@@ -201,7 +201,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         if indexPath.item == pages.count {
             let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
 
-            loginCell.delegate = self 
+//            loginCell.delegate = self 
             return loginCell
         }
         
