@@ -70,13 +70,10 @@
 		7522ADB922CDB2DD0050E32A /* Nozee */ = {
 			isa = PBXGroup;
 			children = (
-				7522ADBA22CDB2DD0050E32A /* AppDelegate.swift */,
-				7528CA3322DAE71F00F3D275 /* MainNavigationController.swift */,
+				757C904122E0289B00DD1B5A /* Delegate */,
+				757C904022E0287800DD1B5A /* Extensions */,
+				757C903F22E0285A00DD1B5A /* Controller */,
 				756063C922DBFE8600BACB37 /* UserDefaults+helps.swift */,
-				756063C722DBF95700BACB37 /* HomeController.swift */,
-				7522ADBC22CDB2DD0050E32A /* SceneDelegate.swift */,
-				7522ADBE22CDB2DD0050E32A /* LoginController.swift */,
-				75A9AA5322D0504C00302EE1 /* Extensions.swift */,
 				75A9AA5522D4110800302EE1 /* LoginCell.swift */,
 				75ED066D22CEE1C500497E11 /* PageCell.swift */,
 				75ED066F22CF005000497E11 /* Page.swift */,
@@ -86,6 +83,33 @@
 				7522ADC822CDB2DF0050E32A /* Info.plist */,
 			);
 			path = Nozee;
+			sourceTree = "<group>";
+		};
+		757C903F22E0285A00DD1B5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7522ADBE22CDB2DD0050E32A /* LoginController.swift */,
+				756063C722DBF95700BACB37 /* HomeController.swift */,
+				7528CA3322DAE71F00F3D275 /* MainNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		757C904022E0287800DD1B5A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75A9AA5322D0504C00302EE1 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		757C904122E0289B00DD1B5A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				7522ADBA22CDB2DD0050E32A /* AppDelegate.swift */,
+				7522ADBC22CDB2DD0050E32A /* SceneDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -38,7 +38,6 @@ class PageCell: UICollectionViewCell {
             let length = attributedText.string.count
             attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: length))
    
-            
             textView.attributedText = attributedText
         }
         
@@ -63,7 +62,7 @@ class PageCell: UICollectionViewCell {
         let tv = UITextView()
         tv.text = "SAMPLE TEXT FOR NOW"
         tv.isEditable = false
-//        tv.contentInset = UIEdgeInsets(top: 24, left: 0, bottom: 0, right: 0)
+        tv.contentInset = UIEdgeInsets(top: 24, left: 0, bottom: 0, right: 0)
         return tv
         
     }()

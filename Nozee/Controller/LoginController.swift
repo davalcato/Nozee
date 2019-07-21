@@ -149,11 +149,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
             self.view.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: self.view.frame.height)
             
         }, completion: nil)
-        
-        
         print("keyboard shown")
-        
-        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
