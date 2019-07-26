@@ -189,6 +189,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     fileprivate func registerCells() {
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(LoginCell.self, forCellWithReuseIdentifier: loginCellId)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -199,7 +200,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         
         //This is where the last login cell is render
         if indexPath.item == pages.count {
-            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
+             guard let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
 
 //            loginCell.delegate = self 
             return loginCell
